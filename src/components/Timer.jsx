@@ -126,6 +126,7 @@ export const Timer = ({
             <div
               style={{
                 display: 'flex',
+                flexWrap: 'wrap',
                 gap: '.5rem',
                 color:
                   !warningLimit || !warningColor
