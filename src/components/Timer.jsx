@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { ClockIcon } from '@heroicons/react/outline'
 
-
-
 export const Timer = ({
   deadlineTimestamp,
   warningColor,
@@ -24,14 +22,23 @@ export const Timer = ({
   const [timeLeft, setTimeLeft] = useState(1)
 
   // let deadlineTimestamp = '2022-06-18 20:42:00-04'
-  let countDownDate = new Date(deadlineTimestamp).getTime() // refactor to props
+  let dtArr = deadlineTimestamp.split(/[- :]/) // explode parts of date into array to universalize the date for more browsers
+  let mobileFriendlyDateParse = new Date( // rebuild date string for more browser compatability
+    dtArr[0],
+    dtArr[1] - 1,
+    dtArr[2],
+    dtArr[3],
+    dtArr[4],
+    dtArr[5],
+  )
+  let countDownDate = new Date(mobileFriendlyDateParse).getTime()
 
   useEffect(() => {
     if (timerUp) return
 
     // Run myfunc every second
     const myfunc = setInterval(function () {
-      let now = new Date().getTime()
+      let now = new Date().getTime() // TODO: make for all browsers⁄ https://stackoverflow.com/questions/5324178/javascript-date-parsing-on-iphone
 
       //let timeleft = countDownDate - now;
       setTimeLeft(countDownDate - now)
@@ -87,7 +94,12 @@ export const Timer = ({
                 textAlign: 'center',
               }}
             >
-              <h3 style={{ fontSize: '1.5rem' }}>{showTitle} {showTimerIcon && <ClockIcon style={{height:'1.5rem', width:'1.5rem'}}/>}</h3>
+              <h3 style={{ fontSize: '1.5rem' }}>
+                {showTitle}{' '}
+                {showTimerIcon && (
+                  <ClockIcon style={{ height: '1.5rem', width: '1.5rem' }} />
+                )}
+              </h3>
             </div>
           </>
         )}
