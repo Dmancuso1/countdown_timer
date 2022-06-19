@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import './App.css'
 import './index.css'
 import { SelectTool } from './components/SelectTool'
@@ -14,36 +14,30 @@ import { Timer } from './components/Timer'
 
 */
 
-
-
-
 function App() {
   return (
-    <main style={{ width: '100vw', backgroundColor: '#313330', height: '100vh' }}>
-
-      <div style={{padding: '4rem 0'}}>
-      <Timer
-        deadlineTimestamp="2022-06-19 03:34:00-04"
-        borderColor="lightgray"
-        warningBorderColor="salmon"
-        standardColor="#e6e6e6"
-        warningColor="salmon"
-        warningLimit={300000}
-        timerUpColor="salmon"
-        showFooterInfo={false}
-        showTitle='Release Date!'
-        useTimerFont={true}
-        showTimerIcon={false}
-      />
-
+    <main
+      style={{ width: '100vw', backgroundColor: '#313330', height: '100vh' }}
+    >
+      <div style={{ padding: '4rem 0' }}>
+        <Timer
+          deadlineTimestamp="2022-06-20 14:00:00-04"
+          borderColor="lightgray"
+          warningBorderColor="salmon"
+          standardColor="#e6e6e6"
+          warningColor="salmon"
+          warningLimit={1000 * 60 * 60}
+          timerUpColor="salmon"
+          showFooterInfo={false}
+          showTitle="Camping Starts in..."
+          useTimerFont={true}
+          showTimerIcon={false}
+        />
       </div>
 
       <SelectTool />
 
-      <div>
-
-
-      </div>
+      <div></div>
     </main>
   )
 }
