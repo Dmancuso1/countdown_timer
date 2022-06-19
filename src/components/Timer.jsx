@@ -137,7 +137,7 @@ export const Timer = ({
             >
               <div
                 style={{
-                  padding: '.5rem .5rem',
+                  padding: '.5rem 0',
                   border: `2px solid`,
                   borderColor:
                     !warningLimit || !warningBorderColor
@@ -145,7 +145,7 @@ export const Timer = ({
                       : timeLeft > warningLimit - 1000
                       ? borderColor
                       : warningBorderColor,
-                  width: '75px',
+                  width: '70px',
                   textAlign: 'center',
                   alignSelf: 'center',
                 }}
@@ -157,7 +157,7 @@ export const Timer = ({
 
               <div
                 style={{
-                  padding: '.5rem .5rem',
+                  padding: '.5rem 0',
                   border: `2px solid`,
                   borderColor:
                     !warningLimit || !warningBorderColor
@@ -165,7 +165,7 @@ export const Timer = ({
                       : timeLeft > warningLimit - 1000
                       ? borderColor
                       : warningBorderColor,
-                  width: '75px',
+                  width: '70px',
                   textAlign: 'center',
                   alignSelf: 'center',
                 }}
@@ -177,7 +177,7 @@ export const Timer = ({
 
               <div
                 style={{
-                  padding: '.5rem .5rem',
+                  padding: '.5rem 0',
                   border: `2px solid`,
                   borderColor:
                     !warningLimit || !warningBorderColor
@@ -185,7 +185,7 @@ export const Timer = ({
                       : timeLeft > warningLimit - 1000
                       ? borderColor
                       : warningBorderColor,
-                  width: '75px',
+                  width: '70px',
                   textAlign: 'center',
                   alignSelf: 'center',
                 }}
@@ -197,7 +197,7 @@ export const Timer = ({
 
               <div
                 style={{
-                  padding: '.5rem .5rem',
+                  padding: '.5rem 0',
                   border: `2px solid`,
                   borderColor:
                     !warningLimit || !warningBorderColor
@@ -205,7 +205,7 @@ export const Timer = ({
                       : timeLeft > warningLimit - 1000
                       ? borderColor
                       : warningBorderColor,
-                  width: '75px',
+                  width: '70px',
                   textAlign: 'center',
                   alignSelf: 'center',
                 }}
