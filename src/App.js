@@ -19,7 +19,13 @@ function App() {
     <main
       style={{ width: '100vw', backgroundColor: '#313330', height: '100vh' }}
     >
-      <div style={{ padding: '4rem 0' }}>
+
+      <nav style={{height: '50px', width: '100vw'}}>
+
+      </nav>
+
+
+      <div style={{}}>
         <Timer
           deadlineTimestamp="2022-06-20 14:00:00-04"
           borderColor="lightgray"
@@ -36,6 +42,7 @@ function App() {
       </div>
 
       <SelectTool />
+
 
       <div></div>
     </main>

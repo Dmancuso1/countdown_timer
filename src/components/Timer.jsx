@@ -77,10 +77,10 @@ export const Timer = ({
     <section
       style={{
         margin: '0 auto',
-        padding: '4rem 0',
+        padding: '0 0 4rem 0 ',
         display: 'flex',
         flexDirection: 'column',
-        height: '50px',
+        // height: '50px',
         justifyContent: 'center',
       }}
     >
@@ -90,8 +90,8 @@ export const Timer = ({
             <div
               style={{
                 color: borderColor,
-                padding: '.5rem',
-                textAlign: 'center',
+                padding: '1rem 0',
+                textAlign: 'center'
               }}
             >
               <h3 style={{ fontSize: '1.5rem' }}>
@@ -231,7 +231,7 @@ export const Timer = ({
                 fontFamily: 'inherit',
               }}
             >
-              <p>Your deadline is set for {deadlineTimestamp}</p>
+              <p>Deadline set for {deadlineTimestamp}</p>
             </div>
           </>
         )}
