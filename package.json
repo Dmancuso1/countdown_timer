@@ -2,7 +2,7 @@
   "name": "hr-serv",
   "version": "0.1.0",
   "homepage": "https://dmancuso1.github.io/countdown_timer/",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@dmancuso/lotide": "^1.0.0",
     "@heroicons/react": "^1.0.6",
