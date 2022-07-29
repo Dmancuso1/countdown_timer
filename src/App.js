@@ -17,17 +17,12 @@ import { Timer } from './components/Timer'
 function App() {
   return (
     <main
-      style={{ width: '100vw', backgroundColor: '#313330', height: '100vh' }}
+      style={{ width: '100vw', backgroundColor: '#313330', height: '100vh', display: 'flex', justifyContent: 'start', flexDirection: 'column'}}
     >
-
-      <nav style={{height: '50px', width: '100vw'}}>
-
-      </nav>
-
 
       <div style={{}}>
         <Timer
-          deadlineTimestamp="2022-06-20 14:00:00-04"
+          deadlineTimestamp="2022-08-12 14:00:00-04"
           borderColor="lightgray"
           warningBorderColor="salmon"
           standardColor="#e6e6e6"
@@ -41,10 +36,12 @@ function App() {
         />
       </div>
 
-      <SelectTool />
-
-
-      <div></div>
+      <div style={{ width: '100%', overflow: 'hidden' }}>
+        <img
+          src="https://images.pexels.com/photos/2662816/pexels-photo-2662816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          style={{ overflow: 'hidden', height: 'auto', width: '100%' }}
+        />
+      </div>
     </main>
   )
 }
