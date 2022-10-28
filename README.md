@@ -10,7 +10,11 @@ https://github.com/gitname/react-gh-pages
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
 
-run \$ `npm run deploy` to connect to `GitHub`
+
+`npm run predeploy` <br>
+`npm run deploy`
+
+
 <br/>
 <br/>
 note: in GitHub, point source branch to branch: gh-pages

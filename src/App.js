@@ -18,7 +18,7 @@ function App() {
 
   return (
     <main
-      style={{ position: 'relative', width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', flexDirection: 'column',flexWrap:'wrap'}}
+      style={{ position: 'relative', width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', flexDirection: 'column',flexWrap:'wrap', position: 'relative'}}
       className="main__bg"
     >
 
@@ -38,12 +38,15 @@ function App() {
         />
       </div>
 
-      <div style={{ width: '100%', overflow: 'hidden' }}>
-        {/* <img
-          src="https://images.pexels.com/photos/2662816/pexels-photo-2662816.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          style={{ overflow: 'hidden', height: 'auto', width: '100%' }}
-        /> */}
-      </div>
+
+
+        <img
+          src='./duolingo.png'
+          style={{ position: 'absolute', bottom: 0, width: '100px', height: '100px', objectFit: 'contain', overflow: 'hidden', margin: '2rem', alignSelf:'center'}}
+        />
+   
+
+
     </main>
   )
 }
