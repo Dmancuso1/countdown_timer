@@ -42,7 +42,7 @@ function App() {
 
         <img
           src='./duolingo.png'
-          style={{ position: 'absolute', bottom: 0, width: '100px', height: '100px', objectFit: 'contain', overflow: 'hidden', margin: '2rem', alignSelf:'center'}}
+          style={{ position: 'absolute', bottom: 0, width: '100px', height: '100px', objectFit: 'contain', overflow: 'hidden', margin: '2rem 0 8rem', alignSelf:'center'}}
         />
    
 
