@@ -1,4 +1,22 @@
-# Getting Started with Create React App
+https://github.com/gitname/react-gh-pages
+
+# add dependancies for react:
+
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+
+# add package.json scripts:
+
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+
+run \$ `npm run deploy` to connect to `GitHub`
+<br/>
+<br/>
+note: in GitHub, point source branch to branch: gh-pages
+note: repo must be public for deployment to work
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +85,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `yarn build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->

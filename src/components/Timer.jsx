@@ -84,26 +84,32 @@ export const Timer = ({
         justifyContent: 'center',
       }}
     >
+      {/* Header */}
       <div>
         {showTitle && (
           <>
             <div
               style={{
                 color: borderColor,
-                padding: '1rem 0',
-                textAlign: 'center'
+                padding: '.5rem',
+                textAlign: 'center',
               }}
             >
-              <h3 style={{ fontSize: '1.5rem' }}>
-                {showTitle}{' '}
-                {showTimerIcon && (
-                  <ClockIcon style={{ height: '1.5rem', width: '1.5rem' }} />
-                )}
-              </h3>
+              <h3 style={{ fontSize: '2rem' }}>{showTitle} </h3>
             </div>
           </>
         )}
       </div>
+      {/* CLock Icon */}
+      {showTimerIcon && (
+        <>
+          <div style={{ textAlign: 'center', padding: '.5rem' }}>
+            <ClockIcon
+              style={{ height: '5rem', width: '5rem', color: 'white' }}
+            />
+          </div>
+        </>
+      )}
 
       {/* when timer is up */}
       {timeLeft < 0 || timerUp ? (
@@ -115,109 +121,113 @@ export const Timer = ({
         </div>
       ) : (
         // while timer is active
-        <div
-          style={{
-            alignSelf: 'center',
-            color: standardColor,
-            fontFamily: useTimerFont ? `Chakra Petch` : `inherit`,
-          }}
-        >
-          {seconds !== '' && days + hours + minutes + seconds > 0 && (
-            <div
-              style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                gap: '.5rem',
-                color:
-                  !warningLimit || !warningColor
-                    ? standardColor
-                    : timeLeft > warningLimit - 1000
-                    ? standardColor
-                    : warningColor,
-              }}
-            >
+        <>
+          <div
+            style={{
+              alignSelf: 'center',
+              color: standardColor,
+              fontFamily: useTimerFont ? `Chakra Petch` : `inherit`,
+            }}
+          >
+            {seconds !== '' && days + hours + minutes + seconds > 0 ? (
               <div
                 style={{
-                  padding: '.5rem 0',
-                  border: `2px solid`,
-                  borderColor:
-                    !warningLimit || !warningBorderColor
-                      ? borderColor
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: '.5rem',
+                  color:
+                    !warningLimit || !warningColor
+                      ? standardColor
                       : timeLeft > warningLimit - 1000
-                      ? borderColor
-                      : warningBorderColor,
-                  width: '70px',
-                  textAlign: 'center',
-                  alignSelf: 'center',
+                      ? standardColor
+                      : warningColor,
                 }}
               >
-                <p style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>
-                  {days} d
-                </p>
-              </div>
+                <div
+                  style={{
+                    padding: '.5rem 0',
+                    border: `2px solid`,
+                    borderColor:
+                      !warningLimit || !warningBorderColor
+                        ? borderColor
+                        : timeLeft > warningLimit - 1000
+                        ? borderColor
+                        : warningBorderColor,
+                    width: '70px',
+                    textAlign: 'center',
+                    alignSelf: 'center',
+                  }}
+                >
+                  <p style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>
+                    {days} d
+                  </p>
+                </div>
 
-              <div
-                style={{
-                  padding: '.5rem 0',
-                  border: `2px solid`,
-                  borderColor:
-                    !warningLimit || !warningBorderColor
-                      ? borderColor
-                      : timeLeft > warningLimit - 1000
-                      ? borderColor
-                      : warningBorderColor,
-                  width: '70px',
-                  textAlign: 'center',
-                  alignSelf: 'center',
-                }}
-              >
-                <p style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>
-                  {hours} h
-                </p>
-              </div>
+                <div
+                  style={{
+                    padding: '.5rem 0',
+                    border: `2px solid`,
+                    borderColor:
+                      !warningLimit || !warningBorderColor
+                        ? borderColor
+                        : timeLeft > warningLimit - 1000
+                        ? borderColor
+                        : warningBorderColor,
+                    width: '70px',
+                    textAlign: 'center',
+                    alignSelf: 'center',
+                  }}
+                >
+                  <p style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>
+                    {hours} h
+                  </p>
+                </div>
 
-              <div
-                style={{
-                  padding: '.5rem 0',
-                  border: `2px solid`,
-                  borderColor:
-                    !warningLimit || !warningBorderColor
-                      ? borderColor
-                      : timeLeft > warningLimit - 1000
-                      ? borderColor
-                      : warningBorderColor,
-                  width: '70px',
-                  textAlign: 'center',
-                  alignSelf: 'center',
-                }}
-              >
-                <p style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>
-                  {minutes} m
-                </p>
-              </div>
+                <div
+                  style={{
+                    padding: '.5rem 0',
+                    border: `2px solid`,
+                    borderColor:
+                      !warningLimit || !warningBorderColor
+                        ? borderColor
+                        : timeLeft > warningLimit - 1000
+                        ? borderColor
+                        : warningBorderColor,
+                    width: '70px',
+                    textAlign: 'center',
+                    alignSelf: 'center',
+                  }}
+                >
+                  <p style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>
+                    {minutes} m
+                  </p>
+                </div>
 
-              <div
-                style={{
-                  padding: '.5rem 0',
-                  border: `2px solid`,
-                  borderColor:
-                    !warningLimit || !warningBorderColor
-                      ? borderColor
-                      : timeLeft > warningLimit - 1000
-                      ? borderColor
-                      : warningBorderColor,
-                  width: '70px',
-                  textAlign: 'center',
-                  alignSelf: 'center',
-                }}
-              >
-                <p style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>
-                  {seconds} s
-                </p>
+                <div
+                  style={{
+                    padding: '.5rem 0',
+                    border: `2px solid`,
+                    borderColor:
+                      !warningLimit || !warningBorderColor
+                        ? borderColor
+                        : timeLeft > warningLimit - 1000
+                        ? borderColor
+                        : warningBorderColor,
+                    width: '70px',
+                    textAlign: 'center',
+                    alignSelf: 'center',
+                  }}
+                >
+                  <p style={{ fontWeight: 'bold', fontSize: '1.5rem' }}>
+                    {seconds} s
+                  </p>
+                </div>
               </div>
-            </div>
-          )}
-        </div>
+            ) : (
+              <div>Loading...</div>
+            )}
+          </div>
+        </>
       )}
 
       <div>
