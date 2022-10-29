@@ -24,7 +24,7 @@ function App() {
 
       <div style={{}}>
         <Timer
-          deadlineTimestamp="2022-11-12 0:00:00-04"
+          deadlineTimestamp="2022-12-09 0:00:00-04"
           borderColor="lightgray"
           warningBorderColor="salmon"
           standardColor="#e6e6e6"
